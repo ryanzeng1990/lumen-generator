@@ -50,7 +50,9 @@ class ConsoleMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/console.stub';
+        $stub = '/stubs/console.stub';
+
+        return $this->resolveStubPath($stub);
     }
 
     /**

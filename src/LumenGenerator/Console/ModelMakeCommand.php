@@ -141,7 +141,7 @@ class ModelMakeCommand extends GeneratorCommand
             ? '/stubs/model.pivot.stub'
             : '/stubs/model.stub';
 
-        return __DIR__ . $stub;
+        return $this->resolveStubPath($stub);
     }
 
     /**

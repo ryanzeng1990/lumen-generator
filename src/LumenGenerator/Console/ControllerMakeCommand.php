@@ -56,7 +56,7 @@ class ControllerMakeCommand extends GeneratorCommand
 
         $stub = isset($stub) ? $stub : '/stubs/controller.plain.stub';
 
-        return __DIR__.$stub;
+        return $this->resolveStubPath($stub);
     }
 
     /**

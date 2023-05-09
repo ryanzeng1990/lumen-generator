@@ -34,7 +34,9 @@ class PipeMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/pipe.stub';
+        $stub = '/stubs/pipe.stub';
+
+        return $this->resolveStubPath($stub);
     }
 
     /**

@@ -32,7 +32,7 @@ class RuleMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . 'stubs' . DIRECTORY_SEPARATOR . 'rule.stub';
+        return $this->resolveStubPath(DIRECTORY_SEPARATOR . 'stubs' . DIRECTORY_SEPARATOR . 'rule.stub');
     }
 
     /**

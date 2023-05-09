@@ -34,7 +34,9 @@ class FactoryMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/factory.stub';
+        $stub = '/stubs/factory.stub';
+
+        return $this->resolveStubPath($stub);
     }
 
     /**

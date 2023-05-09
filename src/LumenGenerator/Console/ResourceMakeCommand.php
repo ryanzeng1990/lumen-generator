@@ -49,9 +49,11 @@ class ResourceMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->collection()
+        $stub = $this->collection()
                     ? __DIR__.'/stubs/resource-collection.stub'
                     : __DIR__.'/stubs/resource.stub';
+
+        return $this->resolveStubPath($stub);
     }
 
     /**

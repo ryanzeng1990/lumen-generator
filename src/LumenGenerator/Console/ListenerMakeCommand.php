@@ -80,9 +80,9 @@ class ListenerMakeCommand extends GeneratorCommand
     protected function getStub()
     {
         if ($this->option('queued')) {
-            return __DIR__.'/stubs/listener-queued.stub';
+            return $this->resolveStubPath('/stubs/listener-queued.stub');
         } else {
-            return __DIR__.'/stubs/listener.stub';
+            return $this->resolveStubPath('/stubs/listener.stub');
         }
     }
 

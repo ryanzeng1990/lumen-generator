@@ -32,7 +32,7 @@ class RequestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/request.stub';
+        return $this->resolveStubPath('/stubs/request.stub');
     }
 
     /**

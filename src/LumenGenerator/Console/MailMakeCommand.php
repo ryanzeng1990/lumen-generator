@@ -83,9 +83,10 @@ class MailMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->option('markdown')
+        $stub = $this->option('markdown')
                         ? __DIR__.'/stubs/markdown-mail.stub'
                         : __DIR__.'/stubs/mail.stub';
+        return $this->resolveStubPath($stub);
     }
 
     /**

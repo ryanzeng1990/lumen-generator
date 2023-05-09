@@ -34,7 +34,7 @@ class TestMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . 'stubs' . DIRECTORY_SEPARATOR . 'unit-test.stub';
+        return $this->resolveStubPath(DIRECTORY_SEPARATOR . 'stubs' . DIRECTORY_SEPARATOR . 'unit-test.stub');
     }
 
     /**

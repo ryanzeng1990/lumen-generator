@@ -32,7 +32,9 @@ class MiddlewareMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/middleware.stub';
+        $stub = '/stubs/middleware.stub';
+
+        return $this->resolveStubPath($stub);
     }
 
     /**
